@@ -20,7 +20,7 @@ This lab walks through configuring a basic WLAN on a Cisco Wireless LAN Controll
 ![Topology Before](ScreenShots/Topology-before-connection.png)
 
 ### After Connection
-![Topology After](Topology-after-connection.png)
+![Topology After](ScreenShots/Topology-after-connection.png)
 
 ### Addressing Table
 
@@ -54,11 +54,11 @@ This lab walks through configuring a basic WLAN on a Cisco Wireless LAN Controll
 
 Open the **Admin PC** browser and navigate to `https://192.168.200.254`. Log in with username `admin` and the configured password:
 
-![WLC Login](Monitor-the-WLC-login.png)
+![WLC Login](ScreenShots/Monitor-the-WLC-login.png)
 
 After logging in, the **Monitor > Summary** screen displays key controller information including management IP, software version, system name, uptime, and the Access Point Summary:
 
-![WLC Monitor Summary](WLC-Monitor-Summary-screen.png)
+![WLC Monitor Summary](ScreenShots/WLC-Monitor-Summary-screen.png)
 
 The summary confirms **WLC-1** is managing **1 AP** (LAP-1) with both 802.11a/n/ac and 802.11b/g/n radios active.
 
@@ -70,7 +70,7 @@ The summary confirms **WLC-1** is managing **1 AP** (LAP-1) with both 802.11a/n/
 
 Navigate to **WLANs** in the top menu. The WLANs list is initially empty:
 
-![WLANs Empty](Create-and-enable-the-WLAN.png)
+![WLANs Empty](ScreenShots/Create-and-enable-the-WLAN.png)
 
 Click **Create New** and then **Go**.
 
@@ -82,7 +82,7 @@ Fill in the new WLAN form:
 - **SSID:** `SSID-5`
 - **ID:** `5`
 
-![Create New WLAN](Create-and-enable-the-WLAN-2.png)
+![Create New WLAN](ScreenShots/Create-and-enable-the-WLAN-2.png)
 
 Click **Apply**.
 
@@ -93,13 +93,13 @@ On the **General** tab of the WLAN edit page:
 - Check **Status: Enabled**
 - Set **Interface/Interface Group(G):** `WLAN-5`
 
-![WLAN General Settings](Create-and-enable-the-WLAN-3.png)
+![WLAN General Settings](ScreenShots/Create-and-enable-the-WLAN-3.png)
 
 #### Step 4 — Verify the Advanced Tab (FlexConnect)
 
 Navigate to the **Advanced** tab. Confirm **FlexConnect Local Switching** and **FlexConnect Local Auth** are both enabled:
 
-![WLAN Advanced Tab](Create-and-enable-the-WLAN-4.png)
+![WLAN Advanced Tab](ScreenShots/Create-and-enable-the-WLAN-4.png)
 
 Click **Apply**.
 
@@ -116,17 +116,17 @@ On the **Security** tab, select **Layer 2** and set:
 - **WPA2 Encryption:** `AES`
 - **Authentication Key Management — PSK:** Enabled
 
-![Security Layer 2](Secure-the-WLAN.png)
+![Security Layer 2](ScreenShots/Secure-the-WLAN.png)
 
 #### Step 2 — Set the PSK Passphrase
 
 Scroll down to the **PSK** field. Set **PSK Format** to `ASCII` and enter the passphrase:
 
-![Security PSK](Secure-the-WLAN-1.png)
+![Security PSK](ScreenShots/Secure-the-WLAN-1.png)
 
 Click **Apply**. The WLANs list now shows the configured WLAN with **[WPA2][Auth(PSK)]** security:
 
-![WLAN Verified](Create-and-enable-the-WLAN-5.png)
+![WLAN Verified](ScreenShots/Create-and-enable-the-WLAN-5.png)
 
 ---
 
@@ -134,7 +134,7 @@ Click **Apply**. The WLANs list now shows the configured WLAN with **[WPA2][Auth
 
 Navigate to **Wireless > Access Points > All APs** to confirm **LAP-1** is registered to the controller at `192.168.200.240`:
 
-![All APs](Create-and-enable-the-WLAN-6.png)
+![All APs](ScreenShots/Create-and-enable-the-WLAN-6.png)
 
 ---
 
@@ -142,7 +142,7 @@ Navigate to **Wireless > Access Points > All APs** to confirm **LAP-1** is regis
 
 On the **Wireless Host**, open the Desktop tab and launch the **Wireless Network Monitor**. Click the **Connect** tab. Select **SSID-5** from the list and click **Connect**:
 
-![Connect Host](Connect-a-Host-to-the-WLAN.png)
+![Connect Host](ScreenShots/Connect-a-Host-to-the-WLAN.png)
 
 Enter the PSK passphrase when prompted. The host will associate and receive an IP via DHCP.
 
@@ -152,7 +152,7 @@ Enter the PSK passphrase when prompted. The host will associate and receive an I
 
 From the Wireless Host, open the **Command Prompt** and ping the Server or another device to confirm end-to-end connectivity:
 
-![Verify Connectivity](verify-connectivity.png)
+![Verify Connectivity](ScreenShots/verify-connectivity.png)
 
 ---
 
@@ -160,7 +160,7 @@ From the Wireless Host, open the **Command Prompt** and ping the Server or anoth
 
 Return to the WLC GUI and navigate to **Monitor > Clients** to confirm the Wireless Host appears as a connected client:
 
-![Verify Settings](Verify-the-Settings.png)
+![Verify Settings](ScreenShots/Verify-the-Settings.png)
 
 ---
 
