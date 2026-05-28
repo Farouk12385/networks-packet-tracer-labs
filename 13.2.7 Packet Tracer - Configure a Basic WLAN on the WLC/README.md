@@ -17,7 +17,7 @@ This lab walks through configuring a basic WLAN on a Cisco Wireless LAN Controll
 ## 🖧 Network Topology
 
 ### Before Connection
-![Topology Before](Topology-before-connection.png)
+![Topology Before](ScreenShots/Topology-before-connection.png)
 
 ### After Connection
 ![Topology After](Topology-after-connection.png)
