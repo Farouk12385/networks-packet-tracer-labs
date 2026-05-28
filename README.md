@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This repository contains a collection of Cisco Packet Tracer labs that cover fundamental networking concepts, including device configuration, routing, switching, and network security.
+This repository contains a collection of Cisco Packet Tracer labs that cover fundamental networking concepts, including device configuration, routing, switching, wireless networking, and network security.
 
 These labs are designed for beginners and intermediate learners to practice real-world networking scenarios using **Cisco Packet Tracer**.
 
@@ -16,6 +16,7 @@ These labs are designed for beginners and intermediate learners to practice real
 * Implement secure network access (SSH)
 * Configure VLANs, trunks, and inter-VLAN routing
 * Build and test small networks
+* Configure and secure wireless LANs on a WLC
 * Troubleshoot connectivity issues
 
 ---
@@ -34,6 +35,8 @@ These labs are designed for beginners and intermediate learners to practice real
 | 8 | Configure Trunks | Configure 802.1Q trunk links and correct native VLAN mismatches |
 | 9 | Configure Router-on-a-Stick Inter-VLAN Routing | Route between VLANs using 802.1Q subinterfaces on a single router uplink |
 | 10 | Configure Layer 3 Switching and Inter-VLAN Routing | Route between VLANs using SVIs on a Multilayer Switch with dual-stack IPv4/IPv6 |
+| 11 | Configure a Basic WLAN on the WLC | Create a WPA2-PSK WLAN on a Cisco WLC and connect a wireless host |
+| 12 | Configure a WPA2 Enterprise WLAN on the WLC | Secure a WLAN with WPA2-Enterprise using a RADIUS server, configure SNMP and DHCP scope |
 
 ---
 
@@ -51,7 +54,9 @@ Packet-Tracer-Labs/
 ├── 3_3_12_VLAN_Configuration/
 ├── 3_4_5_Configure_Trunks/
 ├── 4_2_7_Router-on-a-Stick_Inter-VLAN_Routing/
-└── 4_3_8_Layer3_Switching_Inter-VLAN_Routing/
+├── 4_3_8_Layer3_Switching_Inter-VLAN_Routing/
+├── 13_2_7_Configure_a_Basic_WLAN_on_the_WLC/
+└── 13_3_12_Configure_a_WPA2_Enterprise_WLAN/
 ```
 
 ---
@@ -81,7 +86,7 @@ Packet-Tracer-Labs/
 
 ## 📸 Screenshots
 
-Each lab contains a `ScreenShots/` folder with step-by-step visuals to help understand the configuration process.
+Each lab contains step-by-step screenshots to help understand the configuration process.
 
 ---
 
@@ -95,6 +100,11 @@ Each lab contains a `ScreenShots/` folder with step-by-step visuals to help unde
 * 802.1Q trunk configuration and native VLAN management
 * Inter-VLAN routing (Router-on-a-Stick and Layer 3 Switch SVIs)
 * Dual-stack IPv4 and IPv6 configuration
+* Wireless LAN Controller (WLC) configuration via web GUI
+* WPA2-PSK and WPA2-Enterprise WLAN security
+* RADIUS server integration and 802.1X authentication
+* SNMP trap receiver configuration
+* WLC internal DHCP scope management
 * Troubleshooting & testing connectivity
 
 ---
