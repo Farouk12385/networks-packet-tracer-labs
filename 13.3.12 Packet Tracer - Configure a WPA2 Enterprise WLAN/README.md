@@ -17,10 +17,10 @@ This lab builds on a previous WPA2-PSK configuration by transitioning to a WPA2-
 ## 🖧 Network Topology
 
 ### Before Configuration
-![Topology Before](Topology-before.png)
+![Topology Before](ScreenShots/Topology-before.png)
 
 ### After Configuration
-![Topology After](Topology-after.png)
+![Topology After](ScreenShots/Topology-after.png)
 
 ### Addressing Table
 
@@ -64,7 +64,7 @@ Fill in the new interface form:
 - **Interface Name:** `WLAN-5`
 - **VLAN Id:** `5`
 
-![Create New Interface](Create-a-new-VLAN-interface.png)
+![Create New Interface](ScreenShots/Create-a-new-VLAN-interface.png)
 
 Click **Apply**.
 
@@ -78,7 +78,7 @@ On the **Interfaces > Edit** page configure:
 - **Gateway:** `192.168.5.1`
 - **Primary DHCP Server:** `192.168.5.1`
 
-![Interface Edit](Create-a-new-VLAN-interface-1.png)
+![Interface Edit](ScreenShots/Create-a-new-VLAN-interface-1.png)
 
 Click **Apply**.
 
@@ -90,7 +90,7 @@ Click **Apply**.
 
 Navigate to **Controller > Internal DHCP Server > DHCP Scope**. Two existing scopes are visible:
 
-![DHCP Scope List](Configure-a-DHCP-Scope-2.png)
+![DHCP Scope List](ScreenShots/Configure-a-DHCP-Scope-2.png)
 
 #### Step 2 — Edit the Wired Management Scope
 
@@ -104,7 +104,7 @@ Click **Wired Management** and configure:
 - **Default Routers:** `192.168.200.1`
 - **Status:** `Enabled`
 
-![DHCP Scope Edit](Configure-a-DHCP-Scope-3.png)
+![DHCP Scope Edit](ScreenShots/Configure-a-DHCP-Scope-3.png)
 
 Click **Apply**.
 
@@ -114,7 +114,7 @@ Navigate to **Controller > Interfaces > management** and set:
 
 - **Primary DHCP Server:** `192.168.100.254`
 
-![Management Interface DHCP](Configure-a-DHCP-Scope.png)
+![Management Interface DHCP](ScreenShots/Configure-a-DHCP-Scope.png)
 
 Click **Apply**.
 
@@ -135,7 +135,7 @@ On the **WLANs > Edit 'Floor 2 Employees'** General tab:
 - **Status:** `Enabled`
 - **Interface/Interface Group(G):** `management` *(will be updated to WLAN-5 after security is set)*
 
-![Create New WLAN](Create-a-new-WLAN.png)
+![Create New WLAN](ScreenShots/Create-a-new-WLAN.png)
 
 Click **Apply**.
 
@@ -151,7 +151,7 @@ Navigate to **Management > SNMP > Trap Receivers** and click **New**. Configure:
 - **IP Address:** `172.31.1.254`
 - **Status:** `Enable`
 
-![SNMP New](Configure-SNMP.png)
+![SNMP New](ScreenShots/Configure-SNMP.png)
 
 Click **Apply**.
 
@@ -159,7 +159,7 @@ Click **Apply**.
 
 The SNMP Trap Receiver list now shows **WLAN_SNMP** pointing to `172.31.1.254`:
 
-![SNMP List](Configure-SNMP-1.png)
+![SNMP List](ScreenShots/Configure-SNMP-1.png)
 
 ---
 
@@ -175,7 +175,7 @@ Navigate to **Security > AAA > RADIUS > Authentication** and click **New**. Conf
 - **Port Number:** `1812`
 - **Server Status:** `Enabled`
 
-![RADIUS New](Configure-the-WLC-to-use-a-RADIUS-server.png)
+![RADIUS New](ScreenShots/Configure-the-WLC-to-use-a-RADIUS-server.png)
 
 Click **Apply**.
 
@@ -183,7 +183,7 @@ Click **Apply**.
 
 The RADIUS Authentication Servers list now shows the server at `172.31.1.254` on port `1812`:
 
-![RADIUS List](Screenshot_2026-05-28_144613.png)
+![RADIUS List](ScreenShots/Screenshot_2026-05-28_144613.png)
 
 ---
 
@@ -200,11 +200,11 @@ Navigate to **WLANs > Edit 'Floor 2 Employees' > Security > Layer 2**. Configure
 - **Authentication Key Management — 802.1X:** `Enabled`
 - **PSK:** Unchecked
 
-![WLAN Security Layer 2 - Initial](Configure-WLAN-security.png)
+![WLAN Security Layer 2 - Initial](ScreenShots/Configure-WLAN-security.png)
 
 After applying, the Layer 2 tab confirms WPA2 Policy and AES encryption with 802.1X enabled:
 
-![WLAN Security Layer 2 - Confirmed](Configure-WLAN-security-2.png)
+![WLAN Security Layer 2 - Confirmed](ScreenShots/Configure-WLAN-security-2.png)
 
 #### Step 2 — Assign the RADIUS Server on the AAA Servers Tab
 
@@ -212,7 +212,7 @@ Navigate to the **AAA Servers** tab and set:
 
 - **Server 1 (Authentication):** `IP:172.31.1.254, Port:1812`
 
-![WLAN AAA Servers](Configure-WLAN-security-1.png)
+![WLAN AAA Servers](ScreenShots/Configure-WLAN-security-1.png)
 
 Click **Apply**.
 
@@ -223,7 +223,7 @@ Navigate to the **Advanced** tab and confirm:
 - **FlexConnect Local Switching:** `Enabled`
 - **FlexConnect Local Auth:** `Enabled`
 
-![WLAN Advanced](Create-a-new-WLAN-1.png)
+![WLAN Advanced](ScreenShots/Create-a-new-WLAN-1.png)
 
 Click **Apply**.
 
@@ -241,13 +241,13 @@ Choose **Infrastructure Mode** and enter the wireless network name:
 
 - **Wireless Network Name:** `SSID-5`
 
-![Create Profile SSID](Configure-a-host-to-connect-to-the-enterprise-network.png)
+![Create Profile SSID](ScreenShots/Configure-a-host-to-connect-to-the-enterprise-network.png)
 
 Click **Next**.
 
 *(Note: if the SSID field appears empty on first attempt, re-enter it.)*
 
-![SSID Entry](Configure-a-host-to-connect-to-the-enterprise-network-1.png)
+![SSID Entry](ScreenShots/Configure-a-host-to-connect-to-the-enterprise-network-1.png)
 
 #### Step 3 — Select WPA2-Enterprise Security
 
@@ -255,7 +255,7 @@ On the **Wireless Security** step, select:
 
 - **Security:** `WPA2-Enterprise`
 
-![Wireless Security](Configure-a-host-to-connect-to-the-enterprise-network-2.png)
+![Wireless Security](ScreenShots/Configure-a-host-to-connect-to-the-enterprise-network-2.png)
 
 Click **Next**.
 
@@ -271,17 +271,17 @@ Review the **Confirm New Settings** screen:
 | Authentication | Auto |
 | IP Address | Auto (DHCP) |
 
-![Confirm Settings](Configure-a-host-to-connect-to-the-enterprise-network-3.png)
+![Confirm Settings](ScreenShots/Configure-a-host-to-connect-to-the-enterprise-network-3.png)
 
 Click **Save**. The profile is successfully configured:
 
-![Profile Saved](Configure-a-host-to-connect-to-the-enterprise-network-4.png)
+![Profile Saved](ScreenShots/Configure-a-host-to-connect-to-the-enterprise-network-4.png)
 
 #### Step 5 — Connect to the Network
 
 On the **Profiles** tab, select the **WLC NET** profile (SSID-5, WPA2-Enterprise) and click **Connect**:
 
-![Connect Profile](Configure-a-host-to-connect-to-the-enterprise-network-5.png)
+![Connect Profile](ScreenShots/Configure-a-host-to-connect-to-the-enterprise-network-5.png)
 
 The Wireless Host will authenticate via RADIUS and receive an IP address via DHCP.
 
